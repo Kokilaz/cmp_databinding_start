@@ -22,5 +22,16 @@ export class AppComponent {
      name: blueprintData.serverName,
       content: blueprintData.serverContent
      });
+    }
+     
+     onChangeFirst() {
+       this.serverElements[0].name = 'Changed!';
+     }
+
+     OnDestroyFirst() {
+       this.serverElements.splice(0, 1);
+       //Called once, before the instance is destroyed.
+       //Add 'implements OnDestroy' to the class.
+     }
   }
-}
+
